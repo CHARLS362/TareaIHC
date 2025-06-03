@@ -1,0 +1,9 @@
+<div class="login-container">
+  <h2>Iniciar sesión</h2>
+  <form (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Usuario" [(ngModel)]="username" name="username" required />
+    <input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required />
+    <button type="submit">Ingresar</button>
+    <div *ngIf="loginError" style="color:rgb(3, 18, 115);">Credenciales incorrectas</div>
+  </form>
+</div>
